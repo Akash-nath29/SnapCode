@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshot to Code Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+
+        #uploadStatus {
+            margin-top: 20px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Upload Screenshot</h1>
+        <form action="http://127.0.0.1:8000/uploadfile" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="screenshotInput" accept="image/*">
+            <br>
+            <button id="uploadBtn" type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+
+</html>
